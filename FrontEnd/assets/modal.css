@@ -1,0 +1,274 @@
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #ffffff;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 40px;
+    border: 1px solid #888;
+    border-radius: 25px;
+    width: 60%; /* Could be more or less, depending on screen size */
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+  }
+  
+  
+.modal-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 30px;
+    position: relative;
+}
+
+  /* The Close & return Button */
+  .close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top : 0px;
+    right: 0px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  .return {
+    display: none;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top : 0px;
+    left: 0px;
+  }
+  
+  .return:hover,
+  .return:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.modal-main{
+    display: flex;
+    flex-direction: column;
+}
+.modal-ajout{
+  display: none;
+}
+.galleryModale {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.galleryModaleImg {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.galleryModaleImg img {
+  width: 100%;
+}
+
+.ajoutModale {
+  display: grid;
+  justify-items: center;
+  margin-top: 40px;
+}
+
+.ajoutModaleBtn {
+  background-color: #1D6154;
+  color: white;
+  width: 250px;
+  border-radius: 40px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Syne';
+  font-size:medium;
+  cursor: pointer;
+}
+
+.supprimerGalerie {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: 	#DC143C;
+  display: grid;
+  justify-content: center;
+  font-family: 'Syne';
+  font-size: initial;
+  cursor: pointer;
+}
+
+.galleryModaleTitle {
+  font-family: Work Sans;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.figureModale{
+  position: relative;
+}
+.editLink {
+  cursor: pointer; 
+  margin-top: 5px;
+}
+.deleteButton{
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top:5px;
+  right: 5px;
+}
+
+.deleteButton > i{
+  color: white;
+  font-size: 14px;
+}
+.modalBar {
+  width: 420px;
+  height: 1px;
+  background-color: #B3B3B3;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+
+.modal-ajout  {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-ajout > form{
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap:20px;
+}
+.modal-ajout-img {
+  border-radius: 3px;
+  background: #E8F1F6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10%;
+  width: 80%;
+}
+.previewImage{
+  width: 100%;
+  display: none; /* ça c'est à mettre en flex apres la selection depuis le js*/
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#image{
+  object-fit: cover;
+  width: 30%;
+}
+.removeImage{
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  cursor: pointer;
+}
+.formImage{
+  display: flex; /* à mettre en display none apres la selection d'une image depuis le js*/
+  flex-direction: column;
+  align-items: center;
+  gap:15px;
+}
+.formImage > i{
+  color: gray;
+  font-size: 70px;
+}
+.ajout-btn {
+  border-radius: 20px;
+  background-color: #aaa;
+  color: #1D6154;
+  border: none;
+  padding: 10px 20px;
+  font-family: work sans;
+  font-size:small;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.ajout-btn:hover {
+  color: #aaa;
+  background-color: #1D6154;
+}
+#file{
+  display: none;
+}
+.ajout-type {
+  color : #444444;
+  font-size: 10px;
+}
+.inputs{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  width: 100%;
+}
+.inputs > div{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+.inputs > div > input{
+  height: 30px;
+}
+
+.inputs > div > select{
+  height: 30px;
+}
+
+.btn-modal-valide {
+    background-color: #444444;
+    color: white;
+    width: 250px;
+    border-radius: 40px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Syne';
+    font-size: medium;
+    cursor: pointer;
+    margin-top: 40px;
+}
