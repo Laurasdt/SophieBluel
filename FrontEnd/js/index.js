@@ -38,6 +38,7 @@ function loadCategories() {
     });
 }
 
+// Afficher les filtres 
 function displayFilters(categories) {
   const filters = document.querySelector(".filters");
   categories.forEach(element => {
@@ -46,7 +47,7 @@ function displayFilters(categories) {
     filter.setAttribute("id", element.id);
     filter.textContent = element.name;
     filters.appendChild(filter);
-
+    // écouteur d'évènement ajouté à chaque filtre 
     filter.addEventListener('click', () => {
       const filterId = parseInt(filter.getAttribute('id'));
       const filteredWorks = allWorks.filter((work) => work.categoryId === filterId);
@@ -65,6 +66,7 @@ async function fetchWorks() {
   return await response.json();
 }
 
+// stocke projets dans allWorks et les affiche dans la section avec la classe "gallery" en utilisant createFigure pour créer des éléments HTML représentant chaque projet.
 function displayWorks() {
   const projets = fetchWorks().then((data) => {
     allWorks = data;

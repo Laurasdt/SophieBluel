@@ -12,6 +12,7 @@ var span = document.getElementsByClassName("close")[0];
 var returnButton = document.querySelector(".return");
 var ajoutModaleBtn = document.querySelector(".ajoutModaleBtn");
 var galleryCreated = false;
+
 // When the user clicks on the button, open the modal
 listBtnModifier.forEach(btn => {
     btn.onclick = function () {
@@ -48,6 +49,7 @@ window.onclick = function (event) {
     }
 }
 
+// Fonction appelé lorsque l'utilisateur clique sur btnmodifier
 function createGalleryModale() {
 
     const galleryModaleImg = document.querySelector(".galleryModaleImg");
@@ -173,6 +175,8 @@ if (formulaireAjout) {
     });
 }
 
+
+// Ajout de travaux 
 function ajoutProjet() {
     const image = document.getElementById('file').files[0];
     const title = document.getElementById('title').value;
